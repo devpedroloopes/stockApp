@@ -29,7 +29,7 @@ const LoginScreen = ({ navigation }: any) => {
 
     // Verifica as credenciais no banco de dados do Supabase
     const { data, error } = await supabase
-      .from('users') // A tabela onde os usuários estão armazenados
+      .from('dta-stock') // A tabela onde os usuários estão armazenados
       .select('*')
       .eq('username', username) // Verifica se o username bate
       .eq('password', password) 
